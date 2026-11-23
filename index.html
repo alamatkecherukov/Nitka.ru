@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>nitka_textile — каталог: в наличии и под заказ</title>
+<meta name="description" content="Двусторонние плейсметы, скатерти, мешочки. В наличии с ценами и цветами, под заказ — с указанием сроков. Заявка в WhatsApp в один клик." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600;700&family=Inter:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FDFBF7; --bg-alt:#F2E9DC;
+  --text:#3B2A20; --text-soft:#7A6A5E;
+  --terra:#C0603A; --terra-dk:#A34E2E;
+  --emerald:#2E5A4B; --gold:#D4A24C; --wa:#25D366;
+  --serif:'Cormorant',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --hand:'Caveat',cursive;
+  --radius:12px;
+  --shadow:0 2px 12px rgba(59,42,32,.06);
+  --shadow-hover:0 10px 28px rgba(59,42,32,.12);
+  --container:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.container{max-width:var(--container);margin:0 auto;padding:0 24px}
+.section{padding:72px 0}
+.section--alt{background:var(--bg-alt)}
+.section-head{text-align:center;max-width:640px;margin:0 auto 40px}
+.section-head h2{font-family:var(--serif);font-size:clamp(28px,4vw,44px);font-weight:600;line-height:1.15;margin-bottom:10px}
+.section-head p{color:var(--text-soft);font-size:17px}
+.gold-thread{width:80px;height:1px;background:var(--gold);margin:18px auto 0;position:relative}
+.gold-thread::before,.gold-thread::after{content:'';position:absolute;top:-2px;width:5px;height:5px;border-radius:50%;background:var(--gold)}
+.gold-thread::before{left:-6px}.gold-thread::after{right:-6px}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 26px;border-radius:8px;font-weight:500;font-size:15px;transition:all .3s ease;white-space:nowrap}
+.btn-primary{background:var(--terra);color:#fff}
+.btn-primary:hover{background:var(--terra-dk);transform:translateY(-2px);box-shadow:0 6px 16px rgba(192,96,58,.25)}
+.btn-outline{border:1px solid var(--terra);color:var(--terra)}
+.btn-outline:hover{background:var(--terra);color:#fff}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#1EBE5A;transform:translateY(-2px);box-shadow:0 6px 16px rgba(37,211,102,.3)}
+.btn .ico{width:18px;height:18px;flex-shrink:0}
+
+/* ХЕДЕР */
+.header{position:sticky;top:0;z-index:100;background:rgba(253,251,247,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(212,162,76,.2)}
+.header__inner{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-size:21px;font-weight:600}
+.logo__mark{width:42px;height:42px;border-radius:50%;background:conic-gradient(from 220deg,#C0603A,#D4A24C,#2E5A4B,#C0603A);display:grid;place-items:center;color:#fff;font-family:var(--hand);font-size:17px;font-weight:600}
+.nav{display:flex;gap:26px;font-size:15px}
+.nav a{position:relative;transition:color .2s}
+.nav a::after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--gold);transition:width .3s}
+.nav a:hover{color:var(--terra)}.nav a:hover::after{width:100%}
+.header__actions{display:flex;align-items:center;gap:12px}
+.header__phone{font-weight:500;font-size:14px;color:var(--text-soft)}
+.burger{display:none;width:44px;height:44px;place-items:center;border-radius:8px}
+.burger span{display:block;width:22px;height:2px;background:var(--text);position:relative;transition:.3s}
+.burger span::before,.burger span::after{content:'';position:absolute;left:0;width:22px;height:2px;background:var(--text);transition:.3s}
+.burger span::before{top:-7px}.burger span::after{top:7px}
+.burger.active span{background:transparent}
+.burger.active span::before{top:0;transform:rotate(45deg)}
+.burger.active span::after{top:0;transform:rotate(-45deg)}
+
+/* HERO — под оффер */
+.hero{position:relative;overflow:hidden;padding:96px 0 72px;background:radial-gradient(circle at 80% 20%,rgba(212,162,76,.15),transparent 50%),radial-gradient(circle at 10% 90%,rgba(192,96,58,.12),transparent 50%),var(--bg)}
+.hero::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(59,42,32,.025) 0 1px,transparent 1px 6px),repeating-linear-gradient(0deg,rgba(59,42,32,.025) 0 1px,transparent 1px 6px);pointer-events:none}
+.hero__inner{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero__eyebrow{font-family:var(--hand);font-size:22px;color:var(--terra);margin-bottom:10px}
+.hero h1{font-family:var(--serif);font-size:clamp(32px,5vw,58px);font-weight:600;line-height:1.05;margin-bottom:18px}
+.hero h1 em{font-style:italic;color:var(--terra)}
+.hero__lead{font-size:17px;color:var(--text-soft);max-width:520px;margin-bottom:26px}
+.hero__points{display:flex;flex-direction:column;gap:10px;margin-bottom:28px;max-width:520px}
+.hero__point{display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.hero__point b{color:var(--text)}
+.hero__point svg{flex-shrink:0;width:20px;height:20px;color:var(--emerald);margin-top:2px}
+.hero__cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero__visual{aspect-ratio:4/5;border-radius:16px;background:linear-gradient(135deg,rgba(212,162,76,.25),rgba(192,96,58,.25)),repeating-linear-gradient(45deg,rgba(46,90,75,.08) 0 12px,transparent 12px 24px),#EAD9C6;box-shadow:var(--shadow-hover);position:relative;overflow:hidden;display:grid;place-items:center;color:var(--text-soft);font-family:var(--hand);font-size:20px;text-align:center;padding:24px}
+.hero__visual::after{content:'';position:absolute;inset:12px;border:1px solid rgba(212,162,76,.4);border-radius:10px;pointer-events:none}
+
+/* ПЕРЕКЛЮЧАТЕЛЬ НАЛИЧИЯ */
+.tabs{display:inline-flex;background:#fff;border:1px solid rgba(212,162,76,.35);border-radius:99px;padding:5px;gap:4px;margin:0 auto 32px;box-shadow:var(--shadow)}
+.tab{padding:10px 22px;border-radius:99px;font-size:15px;font-weight:500;color:var(--text-soft);transition:.2s;display:flex;align-items:center;gap:8px}
+.tab .count{font-size:12px;background:var(--bg-alt);color:var(--text-soft);padding:2px 8px;border-radius:99px;font-weight:600}
+.tab.active{background:var(--terra);color:#fff}
+.tab.active .count{background:rgba(255,255,255,.25);color:#fff}
+.tabs-wrap{text-align:center}
+
+/* КАТАЛОГ */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:box-shadow .3s,transform .3s;display:flex;flex-direction:column}
+.card:hover{box-shadow:var(--shadow-hover);transform:translateY(-4px)}
+.card__img{aspect-ratio:4/5;position:relative;overflow:hidden;background:linear-gradient(135deg,#EAD9C6,#D9C2A8);display:grid;place-items:center;color:var(--text-soft);font-family:var(--hand);font-size:18px;text-align:center;padding:20px}
+.card__img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover .card__img img{transform:scale(1.05)}
+.card__badge{position:absolute;top:12px;left:12px;z-index:2;padding:5px 12px;border-radius:99px;font-size:12px;font-weight:600;letter-spacing:.3px}
+.badge-in{background:var(--emerald);color:#fff}
+.badge-order{background:var(--gold);color:var(--text)}
+.card__body{padding:18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card__title{font-family:var(--serif);font-size:21px;font-weight:600;line-height:1.2}
+.card__desc{color:var(--text-soft);font-size:14px}
+.card__colors{display:flex;gap:6px;align-items:center;margin-top:2px}
+.swatch{width:18px;height:18px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(59,42,32,.15);cursor:pointer;transition:transform .15s}
+.swatch:hover{transform:scale(1.15)}
+.swatch.active{box-shadow:0 0 0 2px var(--terra)}
+.card__colors small{font-size:12px;color:var(--text-soft);margin-left:4px}
+.card__meta{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:13px;color:var(--text-soft);margin-top:2px}
+.card__meta .lead{display:inline-flex;align-items:center;gap:6px}
+.card__meta .dot{width:7px;height:7px;border-radius:50%}
+.dot-in{background:var(--emerald)}.dot-order{background:var(--gold)}
+.card__row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:8px}
+.card__price{font-weight:600;font-size:17px;color:var(--terra)}
+.card__price small{font-weight:400;color:var(--text-soft);font-size:12px;display:block}
+.card .btn{padding:10px 16px;font-size:14px}
+.hidden{display:none!important}
+
+/* КАК ЭТО РАБОТАЕТ */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.step{text-align:center;padding:8px}
+.step__num{width:60px;height:60px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;font-family:var(--serif);font-size:25px;font-weight:600;color:var(--terra);border:1px solid var(--gold);background:#fff}
+.step h3{font-family:var(--serif);font-size:21px;margin-bottom:6px;font-weight:600}
+.step p{color:var(--text-soft);font-size:15px}
+
+/* О БРЕНДЕ */
+.about{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center}
+.about__img{aspect-ratio:4/5;border-radius:16px;background:linear-gradient(160deg,rgba(46,90,75,.18),rgba(192,96,58,.2)),repeating-linear-gradient(0deg,rgba(255,255,255,.15) 0 2px,transparent 2px 8px),#D9C2A8;position:relative;box-shadow:var(--shadow-hover);display:grid;place-items:center;color:var(--text-soft);font-family:var(--hand);font-size:20px;padding:24px;text-align:center}
+.about__img::after{content:'';position:absolute;inset:14px;border:1px solid rgba(255,255,255,.5);border-radius:10px}
+.about h2{font-family:var(--serif);font-size:clamp(26px,4vw,40px);line-height:1.15;margin-bottom:16px;font-weight:600}
+.about p{color:var(--text-soft);margin-bottom:14px;font-size:16px}
+.about__sign{font-family:var(--hand);font-size:29px;color:var(--terra);margin-top:20px;line-height:1}
+.about__sign small{display:block;font-family:var(--sans);font-size:13px;color:var(--text-soft);margin-top:6px;letter-spacing:.5px}
+
+/* ФУТЕР */
+.footer{background:var(--text);color:#EDE3D8;padding:56px 0 26px}
+.footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;margin-bottom:36px}
+.footer .logo{color:#fff}
+.footer p{color:#B9A99B;font-size:14px;margin-top:12px;max-width:320px}
+.footer h4{font-family:var(--serif);font-size:18px;margin-bottom:14px;color:#fff;font-weight:600}
+.footer ul{list-style:none;display:flex;flex-direction:column;gap:9px;font-size:14px}
+.footer a{color:#B9A99B;transition:color .2s}
+.footer a:hover{color:var(--gold)}
+.footer__bottom{border-top:1px solid rgba(212,162,76,.25);padding-top:18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#8C7E72}
+
+/* ПЛАВАЮЩИЙ WHATSAPP */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:200;width:56px;height:56px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px rgba(37,211,102,.4);animation:pulse 2.4s infinite;transition:transform .2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:28px;height:28px}
+@keyframes pulse{0%{box-shadow:0 8px 24px rgba(37,211,102,.4),0 0 0 0 rgba(37,211,102,.4)}70%{box-shadow:0 8px 24px rgba(37,211,102,.4),0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 8px 24px rgba(37,211,102,.4),0 0 0 0 rgba(37,211,102,0)}}
+
+@media(max-width:980px){
+  .hero__inner{grid-template-columns:1fr;gap:32px}
+  .hero__visual{max-width:400px;margin:0 auto}
+  .about{grid-template-columns:1fr;gap:28px}
+  .about__img{max-width:400px;margin:0 auto}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .footer__grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+  .section{padding:52px 0}
+  .nav{position:fixed;top:64px;left:0;right:0;background:var(--bg);flex-direction:column;padding:22px;gap:18px;border-bottom:1px solid rgba(212,162,76,.25);transform:translateY(-120%);transition:transform .3s;z-index:99}
+  .nav.open{transform:translateY(0)}
+  .header__phone{display:none}
+  .header__actions .btn span.txt{display:none}
+  .header__actions .btn{padding:12px}
+  .burger{display:grid}
+  .hero{padding:56px 0}
+  .grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr;gap:28px}
+  .footer__grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ХЕДЕР -->
+<header class="header">
+  <div class="container header__inner">
+    <a href="#" class="logo"><img style="width: 12%; border-radius: 100%;" src="icon.jpg" alt=""><span>nitka_textile</span></a>
+    <nav class="nav" id="nav">
+      <a href="#catalog">Каталог</a>
+      <a href="#how">Как заказать</a>
+      <a href="#about">О бренде</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="header__actions">
+      <a class="header__phone" href="tel:+7928052176">+7 928 052-17-6</a>
+      <a class="btn btn-wa" href="https://wa.me/7928052176?text=Здравствуйте!%20Пишу%20с%20сайта%20nitka_textile" target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 0 5.4 0 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6A12 12 0 0 0 12 24c6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.5-8.5ZM12 22c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7.9 1-3.6-.3-.4A9.9 9.9 0 0 1 2 12C2 6.5 6.5 2 12 2s10 4.5 10 10-4.5 10-10 10Zm5.5-7.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8 1-.9 1.2c-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 .9-1 2.3s1.1 2.7 1.2 2.9c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3Z"/></svg>
+        <span class="txt">WhatsApp</span>
+      </a>
+      <button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO ПОД ОФФЕР -->
+<section class="hero">
+  <div class="container hero__inner">
+    <div>
+      <div class="hero__eyebrow">ручная работа · Махачкала</div>
+      <h1>Каталог, где сразу видно, <em>что есть в наличии</em></h1>
+      <p class="hero__lead">Двусторонние плейсметы, скатерти и мешочки. Больше не нужно писать и ждать ответа, чтобы узнать наличие — всё видно на сайте.</p>
+
+      <div class="hero__points">
+        <div class="hero__point">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <span><b>«В наличии»</b> — с ценами и актуальными цветами</span>
+        </div>
+        <div class="hero__point">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <span><b>«Под заказ»</b> — с указанием сроков изготовления</span>
+        </div>
+        <div class="hero__point">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <span><b>Заявка в 1 клик</b> — в WhatsApp с готовым текстом</span>
+        </div>
+      </div>
+
+      <div class="hero__cta">
+        <a href="#catalog" class="btn btn-primary">
+          Смотреть каталог
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="https://wa.me/7928052176?text=Здравствуйте!%20Хочу%20узнать%20о%20товарах%20nitka_textile" target="_blank" rel="noopener" class="btn btn-outline">Написать в WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero__visual">[ макро-фото двустороннего плейсмета ]</div>
+  </div>
+</section>
+
+<!-- КАТАЛОГ С ПЕРЕКЛЮЧАТЕЛЕМ -->
+<section class="section" id="catalog">
+  <div class="container">
+    <div class="section-head">
+      <h2>Каталог</h2>
+      <p>Выберите наличие — и сразу увидите цены и цвета</p>
+      <div class="gold-thread"></div>
+    </div>
+
+    <div class="tabs-wrap">
+      <div class="tabs" role="tablist" aria-label="Наличие">
+        <button class="tab active" data-filter="in" role="tab" aria-selected="true">
+          В наличии <span class="count" id="count-in">3</span>
+        </button>
+        <button class="tab" data-filter="order" role="tab" aria-selected="false">
+          Под заказ <span class="count" id="count-order">2</span>
+        </button>
+        <button class="tab" data-filter="all" role="tab" aria-selected="false">
+          Все
+        </button>
+      </div>
+    </div>
+
+    <div class="grid" id="grid">
+
+      <!-- В НАЛИЧИИ 1 -->
+      <article class="card" data-status="in">
+        <div class="card__img">
+          <span class="card__badge badge-in">В наличии</span>
+          [ фото плейсмета «Бордо» ]
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Плейсмет «Бордо»</h3>
+          <p class="card__desc">Двусторонний, натуральный лён, ручная вышивка.</p>
+          <div class="card__colors" data-product="Плейсмет «Бордо»">
+            <span class="swatch active" style="background:#8B2F2F" data-color="бордо" title="Бордо"></span>
+            <span class="swatch" style="background:#2E5A4B" data-color="изумруд" title="Изумруд"></span>
+            <span class="swatch" style="background:#D4A24C" data-color="охра" title="Охра"></span>
+            <small>3 цвета</small>
+          </div>
+          <div class="card__meta">
+            <span class="lead"><span class="dot dot-in"></span>В наличии</span>
+            <span>2 шт.</span>
+          </div>
+          <div class="card__row">
+            <span class="card__price">1 200 ₽ <small>за 1 шт.</small></span>
+            <a class="btn btn-wa js-order" href="https://wa.me/7928052176?text=Здравствуйте!%20Хочу%20заказать%20плейсмет%20«Бордо»%20(цвет:%20бордо)" target="_blank" rel="noopener">Заказать</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- В НАЛИЧИИ 2 -->
+      <article class="card" data-status="in">
+        <div class="card__img">
+          <span class="card__badge badge-in">В наличии</span>
+          [ фото мешочка ]
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Мешочек «Подарок»</h3>
+          <p class="card__desc">Хлопок, кулиска, для подарков и хранения.</p>
+          <div class="card__colors" data-product="Мешочек «Подарок»">
+            <span class="swatch active" style="background:#EAD9C6" data-color="бежевый" title="Бежевый"></span>
+            <span class="swatch" style="background:#C0603A" data-color="терракота" title="Терракота"></span>
+            <small>2 цвета</small>
+          </div>
+          <div class="card__meta">
+            <span class="lead"><span class="dot dot-in"></span>В наличии</span>
+            <span>5 шт.</span>
+          </div>
+          <div class="card__row">
+            <span class="card__price">350 ₽ <small>за 1 шт.</small></span>
+            <a class="btn btn-wa js-order" href="https://wa.me/7928052176?text=Здравствуйте!%20Хочу%20заказать%20мешочек%20«Подарок»%20(цвет:%20бежевый)" target="_blank" rel="noopener">Заказать</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- В НАЛИЧИИ 3 -->
+      <article class="card" data-status="in">
+        <div class="card__img">
+          <span class="card__badge badge-in">В наличии</span>
+          [ фото салфеток ]
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Салфетки «Лён» (4 шт.)</h3>
+          <p class="card__desc">Натуральный лён, ручная обработка края.</p>
+          <div class="card__colors" data-product="Салфетки «Лён» (4 шт.)">
+            <span class="swatch active" style="background:#F2E9DC" data-color="лен" title="Лён"></span>
+            <span class="swatch" style="background:#2E5A4B" data-color="изумруд" title="Изумруд"></span>
+            <small>2 цвета</small>
+          </div>
+          <div class="card__meta">
+            <span class="lead"><span class="dot dot-in"></span>В наличии</span>
+            <span>1 набор</span>
+          </div>
+          <div class="card__row">
+            <span class="card__price">900 ₽ <small>за набор</small></span>
+            <a class="btn btn-wa js-order" href="https://wa.me/7928052176?text=Здравствуйте!%20Хочу%20заказать%20салфетки%20«Лён»%20(цвет:%20лен)" target="_blank" rel="noopener">Заказать</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ПОД ЗАКАЗ 1 -->
+      <article class="card hidden" data-status="order">
+        <div class="card__img">
+          <span class="card__badge badge-order">Под заказ</span>
+          [ фото скатерти ]
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Скатерть «Лён»</h3>
+          <p class="card__desc">Натуральный лён, любой размер и цвет.</p>
+          <div class="card__colors" data-product="Скатерть «Лён»">
+            <span class="swatch active" style="background:#EAD9C6" data-color="бежевый" title="Бежевый"></span>
+            <span class="swatch" style="background:#2E5A4B" data-color="изумруд" title="Изумруд"></span>
+            <span class="swatch" style="background:#C0603A" data-color="терракота" title="Терракота"></span>
+            <small>3 цвета</small>
+          </div>
+          <div class="card__meta">
+            <span class="lead"><span class="dot dot-order"></span>Под заказ</span>
+            <span>срок 5–7 дней</span>
+          </div>
+          <div class="card__row">
+            <span class="card__price">от 3 500 ₽ <small>зависит от размера</small></span>
+            <a class="btn btn-wa js-order" href="https://wa.me/7928052176?text=Здравствуйте!%20Хочу%20заказать%20скатерть%20«Лён»%20(цвет:%20бежевый)" target="_blank" rel="noopener">Заказать</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ПОД ЗАКАЗ 2 -->
+      <article class="card hidden" data-status="order">
+        <div class="card__img">
+          <span class="card__badge badge-order">Под заказ</span>
+          [ фото плейсмета на заказ ]
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Плейсмет «Индивидуальный»</h3>
+          <p class="card__desc">Ваш узор и цвет, двусторонний, под ваш стол.</p>
+          <div class="card__colors" data-product="Плейсмет «Индивидуальный»">
+            <span class="swatch active" style="background:#D4A24C" data-color="охра" title="Охра"></span>
+            <span class="swatch" style="background:#8B2F2F" data-color="бордо" title="Бордо"></span>
+            <small>по запросу</small>
+          </div>
+          <div class="card__meta">
+            <span class="lead"><span class="dot dot-order"></span>Под заказ</span>
+            <span>срок 7–10 дней</span>
+          </div>
+          <div class="card__row">
+            <span class="card__price">1 500 ₽ <small>за 1 шт.</small></span>
+            <a class="btn btn-wa js-order" href="https://wa.me/7928052176?text=Здравствуйте!%20Хочу%20заказать%20плейсмет%20«Индивидуальный»%20(цвет:%20охра)" target="_blank" rel="noopener">Заказать</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- КАК ЗАКАЗАТЬ -->
+<section class="section section--alt" id="how">
+  <div class="container">
+    <div class="section-head">
+      <h2>Как оформить заказ</h2>
+      <p>Без переписки «а что есть?» — всё уже видно</p>
+      <div class="gold-thread"></div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step__num">1</div>
+        <h3>Выберите раздел</h3>
+        <p>«В наличии» — с ценами и цветами. «Под заказ» — со сроками.</p>
+      </div>
+      <div class="step">
+        <div class="step__num">2</div>
+        <h3>Выберите цвет</h3>
+        <p>Нажмите на кружок цвета — он подставится в заявку автоматически.</p>
+      </div>
+      <div class="step">
+        <div class="step__num">3</div>
+        <h3>Нажмите «Заказать»</h3>
+        <p>Откроется WhatsApp с готовым текстом: товар + цвет. Осталось отправить.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- О БРЕНДЕ -->
+<section class="section" id="about">
+  <div class="container about">
+    <div>
+      <div class="hero__eyebrow">о бренде</div>
+      <h2>Текстиль, в который вложена душа</h2>
+      <p>Мы шьём в Махачкале из натуральных тканей — льна и хлопка. Каждый плейсмет двусторонний: два узора, два настроения в одной вещи.</p>
+      <p>Работаем в наличии и под заказ. Каталог создан, чтобы вы сразу видели актуальные цвета и цены — и не ждали ответа в переписке.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ФУТЕР -->
+<footer class="footer" id="contacts">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="#" class="logo"><span>NITKA_TEXTILE</span></a>
+        <p>Двусторонние плейсметы и текстиль ручной работы. Только натуральные ткани. Махачкала.</p>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="#catalog">Каталог</a></li>
+          <li><a href="#how">Как заказать</a></li>
+          <li><a href="#about">О бренде</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="https://wa.me/7928052176" target="_blank" rel="noopener">WhatsApp: +7 928 052-17-6</a></li>
+          <li><a href="tel:+7928052176">+7 928 052-17-6</a></li>
+          <li><a href="https://instagram.com/nitka_textile" target="_blank" rel="noopener">@nitka_textile</a></li>
+          <li>Махачкала, Дагестан</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> nitka_textile. Все права защищены.</span>
+      <span>Сделано с любовью к ремеслу</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/7928052176?text=Здравствуйте!%20Пишу%20с%20сайта%20nitka_textile" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 0 5.4 0 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6A12 12 0 0 0 12 24c6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.5-8.5ZM12 22c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7.9 1-3.6-.3-.4A9.9 9.9 0 0 1 2 12C2 6.5 6.5 2 12 2s10 4.5 10 10-4.5 10-10 10Zm5.5-7.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8 1-.9 1.2c-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 .9-1 2.3s1.1 2.7 1.2 2.9c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3Z"/></svg>
+</a>
+
+<script>
+// Бургер
+const burger=document.getElementById('burger'),nav=document.getElementById('nav');
+burger.addEventListener('click',()=>{const o=nav.classList.toggle('open');burger.classList.toggle('active',o);burger.setAttribute('aria-expanded',o);});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');burger.classList.remove('active');burger.setAttribute('aria-expanded','false');}));
+
+// Год
+document.getElementById('year').textContent=new Date().getFullYear();
+
+// Фильтр «В наличии / Под заказ / Все»
+const tabs=document.querySelectorAll('.tab');
+const cards=document.querySelectorAll('#grid .card');
+function applyFilter(f){
+  let shown=0;
+  cards.forEach(c=>{
+    const show = (f==='all') || (c.dataset.status===f);
+    c.classList.toggle('hidden',!show);
+    if(show) shown++;
+  });
+  // счётчики
+  const inCount=document.querySelectorAll('#grid .card[data-status="in"]').length;
+  const orderCount=document.querySelectorAll('#grid .card[data-status="order"]').length;
+  document.getElementById('count-in').textContent=inCount;
+  document.getElementById('count-order').textContent=orderCount;
+}
+tabs.forEach(t=>{
+  t.addEventListener('click',()=>{
+    tabs.forEach(x=>{x.classList.remove('active');x.setAttribute('aria-selected','false');});
+    t.classList.add('active');t.setAttribute('aria-selected','true');
+    applyFilter(t.dataset.filter);
+  });
+});
+applyFilter('in'); // по умолчанию «В наличии»
+
+// Выбор цвета → подстановка в ссылку WhatsApp
+document.querySelectorAll('.card__colors').forEach(group=>{
+  const product=group.dataset.product;
+  const card=group.closest('.card');
+  const orderBtn=card.querySelector('.js-order');
+  group.querySelectorAll('.swatch').forEach(sw=>{
+    sw.addEventListener('click',()=>{
+      group.querySelectorAll('.swatch').forEach(s=>s.classList.remove('active'));
+      sw.classList.add('active');
+      const color=sw.dataset.color;
+      const text=encodeURIComponent(`Здравствуйте! Хочу заказать ${product} (цвет: ${color})`);
+      orderBtn.href=`https://wa.me/7928052176?text=${text}`;
+    });
+  });
+});
+</script>
+</body>
+</html>
